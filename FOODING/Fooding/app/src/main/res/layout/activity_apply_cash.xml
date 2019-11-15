@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_pure"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/weixin_iv"
+        android:layout_width="22dp"
+        android:layout_height="17.75dp"
+        android:layout_below="@id/in_title_bar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/wei_xin_logo"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/weixin_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_title_bar"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="33dp"
+        android:layout_toRightOf="@id/weixin_iv"
+        android:text="提现到微信账号：******"
+        android:textColor="#FF3C4151"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/main_price"
+        android:textSize="50sp"
+        tools:text="€ 100.00"/>
+
+    <TextView
+        android:id="@+id/cash_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/price_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/withdrawal_amount"
+        android:textColor="#FF3C4151"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/all_cash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/price_tv"
+        android:layout_below="@id/price_tv"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/full_withdrawal"
+            android:textColor="#FF45CBC0"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/balance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price_tv"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@id/all_cash"
+        android:textColor="#FF3C4151"
+        android:textSize="14sp"
+        tools:text="可用余额：100.00"/>
+
+    <Button
+        android:id="@+id/confirm_cash_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        android:background="@color/main_theme"
+        android:text="@string/confirm_withdrawal"
+        android:textColor="@color/main_text_btn"
+        android:textSize="17dp"/>
+</RelativeLayout>

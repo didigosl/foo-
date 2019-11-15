@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#09a4c8</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="mainColor">#09a4c8</color>
+    <color name="mainColor_tm">#5309a4c8</color>
+    <color name="textColor">#222222</color>
+    <color name="textColorSecondary">#666666</color>
+    <color name="textColorHint">#a1a1a1</color>
+    <color name="transparent_hei">#41000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_main">#F6F6F6</color>
+    <color name="hui2">#222222</color>
+    <color name="hui6">#666666</color>
+    <color name="hui5">#555555</color>
+    <color name="hui9">#999999</color>
+    <color name="huiText">#a1a1a1</color>
+    <color name="redText">#ff6060</color>
+    <color name="lineColor">#F6F6F6</color>
+    <color name="hong">#fe2643</color>
+    <color name="hei1">#222222</color>
+    <color name="hong1">#ff6060</color>
+
+    <color name="golden_stars">#FFC619</color>
+</resources>

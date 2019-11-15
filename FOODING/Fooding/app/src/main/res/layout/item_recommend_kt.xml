@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_recommend"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:layout_margin="0.5dp"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_app_launcher" />
+
+        <TextView
+            android:id="@+id/name_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textSize="13sp"
+            tools:hint="Nombre de product" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Precio de product"
+                android:textColor="@color/black_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price_origin_init"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="€ 0.00"
+                android:visibility="gone" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/frBtnLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:text="@string/add"
+                android:id="@+id/btnRecommend"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/btn_add_clean"
+                android:textSize="12sp"
+                android:textColor="#1F1617"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/lyManageCart"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_hint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/in_cart"
+                android:textSize="9sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_minus"
+                    android:text="—"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:background="@drawable/btn_added"
+                    android:textColor="#1F1617"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp" />
+                <ImageButton
+                    android:id="@+id/ib_delete"
+                    android:background="@drawable/btn_add_clean"
+                    android:src="@drawable/ic_delete"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp" />
+
+                <Button
+                    android:id="@+id/btn_plus"
+                    android:text="+"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_added"
+                    android:textColor="#1F1617"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

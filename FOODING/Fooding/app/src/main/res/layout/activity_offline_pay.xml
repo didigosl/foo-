@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_title_bar"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="60dp"
+                android:textColor="#FF45CBC0"
+                android:textSize="50sp"
+                tools:text="€ 180.76" />
+
+            <TextView
+                android:id="@+id/hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="60dp"
+                android:text="@string/deposit_money_count"
+                android:textColor="#FF3C4151"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hint_tv"
+                android:layout_marginBottom="21dp"
+                android:layout_marginLeft="25dp"
+                android:textColor="#FF3C4151"
+                android:textSize="16sp"
+                tools:text="开户行：中国银行" />
+
+            <View
+                android:id="@+id/bank_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/bank"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@color/grey_sp" />
+
+            <TextView
+                android:id="@+id/bank_code_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bank_divider"
+                android:layout_marginBottom="21dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="21dp"
+                android:textColor="#FF3C4151"
+                android:textSize="16sp"
+                tools:text="银行账号：0000 0000 0000 0000" />
+
+            <View
+                android:id="@+id/bank_code_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/bank_code_tv"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@color/grey_sp" />
+
+            <TextView
+                android:id="@+id/buy_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bank_code_divider"
+                android:layout_marginBottom="21dp"
+                android:layout_marginLeft="25dp"
+                android:text="购买说明："
+                android:textColor="#FF3C4151"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/remark_tv"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@id/buy_hint"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFF6F6F6"
+                android:gravity="left"
+                android:padding="10dp"
+                android:textColor="#FFA4A4A4"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/confirm_pay_bt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/remark_tv"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/bt_save"
+                android:text="@string/confirm_payment"
+                android:textColor="@color/bt_save_text"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

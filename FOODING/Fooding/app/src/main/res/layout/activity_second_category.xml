@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <FrameLayout
+        android:id="@+id/category_fl"
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/in_title_bar">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/category_tl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:tabIndicatorColor="@color/no_sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_rg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/category_fl"
+        android:background="#E6FFFFFF"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/default_rb"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/normal"
+            android:textColor="@color/tab_text"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/sales_volume_rb"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/top_seller"
+            android:textColor="@color/tab_text"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/price_rb"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/price"
+            android:textColor="@color/tab_text"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/time_rb"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="@string/old"
+            android:textColor="@color/tab_text"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/filter_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/filter_rg"
+        android:background="@color/grey_sp" />
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/refresh_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filter_divider"
+        cube_ptr:ptr_duration_to_close_either="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <GridView
+            android:id="@+id/data_gv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:horizontalSpacing="11dp"
+            android:listSelector="@drawable/grid_selector"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="11dp" />
+
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+</RelativeLayout>

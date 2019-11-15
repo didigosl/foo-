@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_title_bar"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/select_vip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="22dp"
+                android:text="请选择VIP类型"
+                android:textColor="#FFA4A4A4"
+                android:textSize="14dp" />
+
+            <com.technology.greenenjoyshoppingstreet.utils.view.ListViewInScroll
+                android:id="@+id/select_vip_data_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_vip_tv"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/no_sp"
+                android:listSelector="@drawable/grid_selector"
+                android:scrollbars="none"
+                tools:visibility="gone" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/vip_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_vip_data_lv"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="15dp"
+                android:text="VIP说明"
+                android:textColor="#FF3C4151"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vip_des_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vip_hint_tv"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="#FFA4A4A4"
+                android:textSize="14sp"
+                tools:text="这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里是说明文档这里" />
+
+            <Button
+                android:id="@+id/confirm_pay_bt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/vip_des_tv"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/main_theme"
+                android:text="@string/confirm_buy"
+                android:textColor="@color/main_text_btn"
+                android:textSize="17dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

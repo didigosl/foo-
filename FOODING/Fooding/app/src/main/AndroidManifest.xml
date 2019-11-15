@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.technology.greenenjoyshoppingstreet">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--<uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />-->
+    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+    <!--<uses-permission android:name="android.permission.VIBRATE" />-->
+    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
+    <!--<uses-permission android:name="android.permission.READ_LOGS" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <!--<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />-->
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme">
+        <activity android:name=".ktnewui.CategoryKtActivity"/>
+        <activity android:name=".ktnewui.HomeKtActivity" /> <!-- <meta-data -->
+        <!-- android:name="com.yaphetzhao.glidecatchsimple.glide.GlideConfiguration" -->
+        <!-- android:value="GlideModule" /> -->
+        <activity
+            android:name=".main.WelcomeActivity"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="com.technology.enjoyshoppingstreet.braintree" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.VerifyCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.SearchResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.MainPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.EvaluateListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.AddCartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActivityDialogStyle" />
+        <activity
+            android:name=".cart.CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.CommitEvaluteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.ThreeCateGoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.ChangeNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.MineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.MyCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.MyAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.PersonalSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.OpinionFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.HelpCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.InviteFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.EditAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".mine.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.AddressListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.HelpCenterDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.AccountRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.ApplyCashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.BuyVIPActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.OrderListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.ConfirmOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.OrderPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.OfflinePayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.SecondCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.ProductDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 微信分享回调 -->
+        <!--<activity-->
+            <!--android:name=".wxapi.WXEntryActivity"-->
+            <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+            <!--android:exported="true"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <!--<activity-->
+            <!--android:name="com.mob.tools.MobUIShell"-->
+            <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar"-->
+            <!--android:windowSoftInputMode="stateHidden|adjustResize" />-->
+        <activity android:name=".newui.view.GoodsListActivity" />
+        <activity android:name=".newui.view.GoodsDetailActivity" />
+        <activity android:name=".newui.view.GoodsCommentActivity" />
+        <activity android:name=".newui.view.ShoppingCartActivity" />
+        <activity android:name=".newui.view.ShoppingCartDetailActivity" />
+        <activity android:name=".newui.view.ConfirmOrderActivity" />
+        <activity
+            android:name=".newui.view.CouponActivity"
+            android:hardwareAccelerated="false" />
+        <activity android:name=".newui.view.PayActivity" />
+        <activity android:name=".newui.view.XianXiaPayActivity" />
+        <activity android:name=".newui.view.OrderListActivity" />
+        <activity android:name=".newui.view.WebPayActivity" />
+        <activity android:name=".newui.view.MainActivity" />
+        <activity android:name=".newui.view.MainFragmentActivity" />
+    </application>
+
+</manifest>

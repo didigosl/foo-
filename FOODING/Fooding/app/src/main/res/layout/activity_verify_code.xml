@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <TextView
+        android:id="@+id/verify_code_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_title_bar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/verification_code_title"
+        android:textColor="#FF3C4151"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/send_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verify_code_hint"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="70dp"
+        android:text="已向 +34 678888869 发送验证码"
+        android:textColor="#FF3C4151"
+        android:textSize="13dp" />
+
+    <com.jungly.gridpasswordview.GridPasswordView
+        android:id="@+id/verify_pw"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/send_hint_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        app:gpvGridColor="@color/white_pure"
+        app:gpvLineColor="@color/grey_sp"
+        app:gpvLineWidth="1dp"
+        app:gpvPasswordLength="6"
+        app:gpvPasswordType="textVisiblePassword"
+        app:gpvTextColor="#FF45CBC0"
+        app:gpvTextSize="15dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/resend_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/verify_pw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/resend_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend"
+            android:textColor="@color/select_color"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/resend_rl"
+        android:layout_margin="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/lr_4_main"
+        android:text="@string/login"
+        android:textColor="#FFFFFFFF"
+        android:textSize="17sp" />
+
+</RelativeLayout>

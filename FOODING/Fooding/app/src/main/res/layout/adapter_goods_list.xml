@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="162dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_height="162dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="12131"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="12131"
+                android:textColor="@color/black_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_money_init"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:hint="€ 0.00"
+                android:visibility="gone" />
+        </LinearLayout>
+        <FrameLayout
+        android:id="@+id/frBtnLayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:text="@string/add"
+            android:id="@+id/btnRecommend"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/btn_add_clean"
+            android:textSize="12sp"
+            android:textColor="#1F1617"/>
+    </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/lyManageCart"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_hint" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/in_cart"
+                android:textSize="9sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_minus"
+                    android:text="—"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:background="@drawable/btn_added"
+                    android:textColor="#1F1617"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp" />
+                <ImageButton
+                    android:id="@+id/btn_delete"
+                    android:background="@drawable/btn_add_clean"
+                    android:src="@drawable/ic_delete"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp" />
+
+                <Button
+                    android:id="@+id/btn_plus"
+                    android:text="+"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_added"
+                    android:textColor="#1F1617"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

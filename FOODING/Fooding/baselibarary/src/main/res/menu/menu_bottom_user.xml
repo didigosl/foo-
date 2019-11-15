@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/i_home"
+        android:checked="true"
+        android:icon="@drawable/ic_home_tv_ico01"
+        android:title="@string/bottom_user1" />
+
+    <item
+        android:id="@+id/i_message"
+        android:icon="@drawable/ic_home_tv_ico02"
+        android:title="@string/bottom_user2" />
+
+    <item
+        android:id="@+id/i_finance"
+        android:icon="@drawable/ic_home_tv_ico03"
+        android:title="@string/bottom_user3" />
+    <item
+        android:id="@+id/i_my"
+        android:icon="@drawable/ic_home_tv_ico04"
+        android:title="@string/bottom_user4" />
+</menu>

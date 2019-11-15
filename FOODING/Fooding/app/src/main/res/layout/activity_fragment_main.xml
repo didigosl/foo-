@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white_pure"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_app_launcher" />
+
+            <TextView
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_name"
+                android:textColor="@color/main3"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <FrameLayout
+                android:layout_weight="1.6"
+                android:id="@+id/search_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/ui47" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/layout_tab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white_pure">
+
+                <com.flyco.tablayout.SlidingTabLayout
+                    android:id="@+id/tab_goodsType"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    app:tl_indicator_color="@color/tab_select"
+                    app:tl_indicator_corner_radius="45dp"
+                    app:tl_indicator_height="3dp"
+                    app:tl_indicator_width="13dp"
+                    app:tl_textSelectColor="@color/tab_select"
+                    app:tl_textUnselectColor="@color/textColor_hei" />
+            </FrameLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager_goodsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

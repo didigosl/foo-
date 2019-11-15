@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <TextView
+        android:id="@+id/phone_login_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_title_bar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/login_title"
+        android:textColor="#FF3C4151"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/login_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_login_hint"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="70dp"
+        android:text="@string/not_register_sistem_automatically"
+        android:textColor="#FF3C4151"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/phone_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_hint">
+
+        <TextView
+            android:id="@+id/pre_phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/ui49"
+            android:drawablePadding="4dp"
+            android:text="+86"
+            android:textColor="#FF3C4151"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/phone_delete_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:id="@+id/phone_delete_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ui61" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/phone_delete_rl"
+            android:layout_toRightOf="@id/pre_phone_tv"
+            android:background="@null"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone"
+            android:textColor="@color/main_text"
+            android:textColorHint="#FFA4A4A4"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/henxian"
+        android:layout_below="@id/phone_rl"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_xieyi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_rl"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/登录即表示您同意_1"
+            android:textColor="#A4A4A4"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/protocol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/登录即表示您同意_2"
+            android:textColor="@color/select_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/confirm_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/layout_xieyi"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/lr_4_main"
+        android:text="@string/ok"
+        android:textColor="@color/bt_save_text" />
+
+    <LinearLayout
+        android:id="@+id/weixin_loging_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="18dp"
+            android:background="@drawable/ic_weixin_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="使用微信登录"
+            android:textColor="#FF45CBC0"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</RelativeLayout>

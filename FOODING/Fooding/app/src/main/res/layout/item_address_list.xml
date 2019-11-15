@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.technology.greenenjoyshoppingstreet.utils.view.SwipeListLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="135dp"
+        android:layout_height="match_parent"
+        android:background="#3C4151"
+        tools:visibility="gone">
+
+
+        <com.fang.dashview.DashView
+            android:id="@+id/center_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            app:dashOrientation="1"
+            app:dashWidth="2dp"
+            app:lineColor="@android:color/holo_green_light"
+            app:lineHeight="1dp"
+            app:lineWidth="4dp" />
+
+
+        <TextView
+            android:id="@+id/edit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/center_divider"
+            android:gravity="center"
+            android:text="@string/edit"
+            android:textColor="#FFD0D5D8"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/delete_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/center_divider"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="#FFD0D5D8"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/item_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <CheckBox
+            android:id="@+id/select_cb"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/cb_address"
+            android:button="@null" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@id/select_cb"
+            android:textColor="#FF3C4151"
+            android:textSize="14sp"
+            tools:text="王小茜" />
+
+        <TextView
+            android:id="@+id/default_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/name_tv"
+            android:background="@drawable/shape_purple_circle_corner"
+            android:paddingLeft="6dp"
+            android:paddingTop="3dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="3dp"
+            android:text="@string/string_default"
+            android:textColor="#FF45CBC0"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@id/select_cb"
+            android:textColor="#FF3C4151"
+            android:textSize="14sp"
+            tools:text="+34 685 36 98 26" />
+
+        <TextView
+            android:id="@+id/address_tv"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toRightOf="@id/select_cb"
+            tools:text="西班牙马德里导游地接华宇"
+            android:textColor="#FF3C4151"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+</com.technology.greenenjoyshoppingstreet.utils.view.SwipeListLayout>

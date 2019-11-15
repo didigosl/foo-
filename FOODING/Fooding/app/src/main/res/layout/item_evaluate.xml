@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:src="@color/gray_hint"/>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:textColor="#FF3C4151"
+        android:textSize="14sp"
+        tools:text="Liam Johansen"
+        />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="168dp"
+        android:layout_height="13dp"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/profile_image"
+        android:textColor="#FFA4A4A4"
+        android:textSize="11sp"
+        tools:text="1天前"
+        />
+
+    <RatingBar
+        android:id="@+id/star_rb"
+        style="@style/fiveRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:layout_marginLeft="10dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="1"
+        tools:rating="4"/>
+
+
+    <TextView
+
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/profile_image"
+        tools:text="这款T恤质量很棒，运动时穿着很舒服，真的没有失望，还会回购的～"
+        android:textColor="#FF3C4151"
+        android:textSize="14sp"
+        />
+</RelativeLayout>

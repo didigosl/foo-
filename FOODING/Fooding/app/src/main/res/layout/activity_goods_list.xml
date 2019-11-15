@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white_pure">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_goodsType"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            tl:tl_indicator_color="@color/select_color"
+            tl:tl_indicator_corner_radius="45dp"
+            tl:tl_indicator_height="3dp"
+            tl:tl_indicator_width="13dp"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_padding="20dp"
+            tl:tl_textSelectColor="@color/select_color"
+            tl:tl_textUnselectColor="@color/textColor_hei" />
+    </FrameLayout>
+
+    <View style="@style/henxian" />
+
+    <LinearLayout
+        android:id="@+id/view_show"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <com.duma.ld.baselibarary.widget.CheckBoxGoodsList
+            android:id="@+id/cb_diQu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bai"
+            android:gravity="center"
+            app:CbName="@string/normal1"
+            app:CbTrueTvColor="@color/select_color" />
+
+        <com.duma.ld.baselibarary.widget.CheckBoxGoodsList
+            android:id="@+id/cb_xiaoLiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bai"
+            android:gravity="center"
+            app:CbName="@string/top_seller"
+            app:CbTrueTvColor="@color/select_color" />
+
+        <com.duma.ld.baselibarary.widget.CheckBoxGoodsList
+            android:id="@+id/cb_jiaGe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bai"
+            android:gravity="center"
+            app:CbIsMode="true"
+            app:CbName="@string/price"
+            app:CbTrueTvColor="@color/select_color" />
+
+        <com.duma.ld.baselibarary.widget.CheckBoxGoodsList
+            android:id="@+id/cb_shijian"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bai"
+            android:gravity="center"
+            app:CbIsMode="true"
+            app:CbName="@string/old"
+            app:CbTrueTvColor="@color/select_color" />
+    </LinearLayout>
+
+    <View style="@style/henxian" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_goodsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

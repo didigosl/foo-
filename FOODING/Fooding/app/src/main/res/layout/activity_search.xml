@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hint="http://schemas.android.com/apk/res-auto"
+    xmlns:tagview="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/root_titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/search_rl"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@id/cancel_rl"
+            android:layout_weight="1"
+            android:background="@drawable/shape_search_gray">
+
+            <ImageView
+                android:id="@+id/search_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:background="@drawable/ui47" />
+
+            <EditText
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/search_iv"
+                android:background="@null"
+                android:hint="@string/hint_search"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cancel_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginRight="14dp"
+                android:hint="@string/cancel"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/title_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/root_titlebar_rl"
+        android:background="@color/bg" />
+
+    <RelativeLayout
+        android:id="@+id/history_hot_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_divider"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/history_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/history_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/search_history"
+                android:textColor="#FF343434"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/clear_history_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dp"
+                android:drawableLeft="@drawable/ic_delete_can"
+                android:drawablePadding="5dp"
+                android:text="@string/empty"
+                android:textColor="#FF808080"
+                android:textSize="14dp" />
+
+            <com.cunoraz.tagview.TagView
+                android:id="@+id/history_tag_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/history_tv"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                tagview:lineMargin="10dp"
+                tagview:tagMargin="20dp"
+                tagview:textPaddingBottom="5dp"
+                tagview:textPaddingLeft="10dp"
+                tagview:textPaddingRight="10dp"
+                tagview:textPaddingTop="5dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/hot_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/history_rl">
+
+            <TextView
+                android:id="@+id/hot_search_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="@string/popular_searched"
+                android:textColor="#FF343434"
+                android:textSize="13dp" />
+
+            <com.cunoraz.tagview.TagView
+
+                android:id="@+id/hot_tag_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hot_search_tv"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                tagview:lineMargin="10dp"
+                tagview:tagMargin="20dp"
+                tagview:textPaddingBottom="5dp"
+                tagview:textPaddingLeft="18dp"
+                tagview:textPaddingRight="18dp"
+                tagview:textPaddingTop="5dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

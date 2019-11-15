@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DragSeekBarView">
+        <attr name="DragProgressBg" format="color" />
+        <attr name="DragViewBg" format="color" />
+        <attr name="DragSbBg" format="color" />
+        <attr name="DragTextColor" format="color" />
+        <attr name="DragViewDrawable" format="reference" />
+        <attr name="DragText" format="string" />
+        <attr name="DragViewWidth" format="dimension" />
+        <attr name="isCenter" format="boolean" />
+        <attr name="isAnimation" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_radius" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_background" format="color|integer" />
+        <attr name="ci_selected_background" format="color|integer" />
+        <attr name="ci_gravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="ci_mode">
+            <enum name="inside" value="0" />
+            <enum name="outside" value="1" />
+            <enum name="solo" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LinearImageLayout">
+        <!--<attr name="LiName" format="string" />-->
+        <attr name="LiIcon" format="reference" />
+        <!--<attr name="LiPadding" format="dimension" />-->
+        <attr name="LiNum" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxGoodsList">
+        <attr name="CbName" format="string" />
+        <attr name="CbTrueIcon" format="reference" />
+        <attr name="CbFalseIcon" format="reference" />
+        <attr name="CbTrueTvColor" format="color" />
+        <attr name="CbFalseTvColor" format="color" />
+        <attr name="CbIsMode" format="boolean" />
+        <attr name="CbTextSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CheckBoxComment">
+        <attr name="CbC_Name" format="string" />
+    </declare-styleable>
+    <declare-styleable name="NumInputLayout">
+        <attr name="Nun_Width" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RedioLayout">
+        <attr name="redio_text" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SimpleRatingBar">
+        <attr name="srb_borderColor" format="color" />
+        <attr name="srb_fillColor" format="color" />
+        <attr name="srb_backgroundColor" format="color" />
+        <attr name="srb_starBackgroundColor" format="color" />
+        <attr name="srb_pressedBorderColor" format="color" />
+        <attr name="srb_pressedFillColor" format="color" />
+        <attr name="srb_pressedBackgroundColor" format="color" />
+        <attr name="srb_pressedStarBackgroundColor" format="color" />
+        <attr name="srb_numberOfStars" format="integer" />
+        <attr name="srb_starSize" format="dimension" />
+        <attr name="srb_maxStarSize" format="dimension" />
+        <attr name="srb_starsSeparation" format="dimension" />
+        <attr name="srb_starBorderWidth" format="float" />
+        <attr name="srb_starCornerRadius" format="float" />
+        <attr name="srb_isIndicator" format="boolean" />
+        <attr name="srb_rating" format="float" />
+        <attr name="srb_stepSize" format="float" />
+        <attr name="srb_drawBorderEnabled" format="boolean" />
+        <attr name="srb_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

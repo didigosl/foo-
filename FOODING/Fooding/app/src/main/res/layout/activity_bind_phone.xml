@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_pure"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar"/>
+
+    <TextView
+        android:id="@+id/phone_bind_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/bind_phone_number"
+        android:textColor="#FF3C4151"
+        android:textSize="24dp"
+        />
+
+    <TextView
+        android:id="@+id/bind_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_bind_hint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:text="@string/get_more_benefits"
+        android:textColor="#FF3C4151"
+        android:textSize="13dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/phone_rl"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bind_hint">
+
+        <TextView
+            android:id="@+id/pre_phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:text="+34"
+            android:textColor="#FF3C4151"
+            android:textSize="15sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/phone_delete_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:id="@+id/phone_delete_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+
+                android:src="@drawable/ic_delete_circle"
+                />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/phone_et"
+            android:inputType="phone"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/phone_delete_rl"
+            android:layout_toRightOf="@id/pre_phone_tv"
+            android:text="@string/enter_phone_number"
+            android:textColor="@color/main_text"
+            android:textColorHint="#FFA4A4A4"
+            android:textSize="15dp"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/phone_divider"
+        android:layout_below="@id/phone_rl"
+        android:background="@color/grey_sp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:layout_marginTop="36dp"
+        android:id="@+id/verify_code_rl"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_divider">
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/verify_code_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/send_code"
+            android:textColor="#FF3C4151"
+            android:textSize="15sp"
+            />
+
+
+
+
+        <EditText
+            android:layout_marginLeft="30dp"
+            android:id="@+id/verify_code_et"
+            android:background="@null"
+            android:layout_toLeftOf="@id/verify_code_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/enter_code"
+            android:textColor="@color/main_text"
+            android:textColorHint="#FFA4A4A4"
+            android:textSize="15dp"
+            />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/verify_code_divider"
+        android:layout_below="@id/verify_code_rl"
+        android:background="@color/grey_sp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/next_step_bt"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/verify_code_divider"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bt_save"
+        android:text="@string/next_step"
+        android:textColor="@color/main_text_btn"
+        />
+
+
+</RelativeLayout>

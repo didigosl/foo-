@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/refresh_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_title_bar"
+        android:layout_marginTop="10dp"
+        cube_ptr:ptr_duration_to_close_either="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <ListView
+            android:id="@+id/data_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_divider"
+            android:background="@color/white_pure"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/no_sp"
+            android:dividerHeight="0dp"
+            android:listSelector="@drawable/grid_selector"
+            android:scrollbars="none" />
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <include
+        android:id="@+id/no_list_data_refresh_rl"
+        layout="@layout/include_no_data_hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/refresh_fl"
+        android:visibility="gone" />
+
+</RelativeLayout>

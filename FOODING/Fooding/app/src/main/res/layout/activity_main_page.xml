@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/root_titlebar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white_pure"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_app_launcher" />
+
+            <TextView
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_name"
+                android:textColor="@color/main3"
+                android:textSize="18sp" />
+
+            <FrameLayout
+                android:layout_weight="1.6"
+                android:id="@+id/search_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@drawable/ui47" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/category_fl"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/root_titlebar_rl">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/category_tl"
+            style="@style/CategoryTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            app:tabIndicatorColor="@color/no_sp" />
+    </FrameLayout>
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/refresh_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/category_fl"
+        cube_ptr:ptr_duration_to_close_either="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <com.technology.greenenjoyshoppingstreet.utils.view.MyScrollView
+            android:id="@+id/root_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="0dp">
+
+                    <com.bigkoo.convenientbanner.ConvenientBanner
+                        android:id="@+id/banner_cb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:canLoop="true" />
+                </android.support.v7.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/recommen_root_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/cardView"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:id="@+id/today_buy_root_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/today_buy_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp">
+
+                            <TextView
+                                android:id="@+id/today_buy_hint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/limited_time_offer"
+                                android:textColor="#FF001D21"
+                                android:textSize="14dp" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+
+                                android:layout_height="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="25dp"
+                                android:layout_toRightOf="@id/today_buy_hint"
+                                android:background="@drawable/ic_rob_icon" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="10dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="25dp"
+                                android:layout_toLeftOf="@id/today_buy_hint"
+                                android:background="@drawable/ic_rob_icon" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/today_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/today_buy_rl"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="25dp"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            tools:text=" 02 时 25 分 31 秒" />
+
+                        <com.technology.greenenjoyshoppingstreet.utils.view.HorizontalListView
+                            android:id="@+id/flash_sale_lv"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@id/today_time_tv"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:divider="@color/no_sp"
+                            android:listSelector="@drawable/grid_selector"
+                            android:scrollbars="none" />
+
+                        <TextView
+                            android:id="@+id/next_tv"
+                            android:layout_width="110dp"
+                            android:layout_height="36dp"
+                            android:layout_below="@id/flash_sale_lv"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="31dp"
+                            android:layout_marginBottom="51dp"
+                            android:background="@drawable/shape_btn_edge"
+                            android:gravity="center"
+                            android:text="@string/soon"
+                            android:textColor="#FF3C4151"
+                            android:textSize="14dp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recomment_data_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/today_buy_root_rl">
+
+                        <com.technology.greenenjoyshoppingstreet.utils.view.ListViewInScroll
+                            android:id="@+id/recomment_data_lv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:divider="@color/no_sp"
+                            android:listSelector="@drawable/shape_nothing"
+                            android:scrollbars="none" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_detail_root_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/recommen_root_rl"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/hot_category_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/hot_category_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="30dp"
+                            android:text="热门分类 | Hot Sale"
+                            android:textColor="#FF3C4151"
+                            android:textSize="14sp" />
+
+                        <com.technology.greenenjoyshoppingstreet.utils.view.GridViewInScroll
+                            android:id="@+id/hot_data_gv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hot_category_tv"
+                            android:horizontalSpacing="2dp"
+                            android:listSelector="@drawable/grid_selector"
+                            android:numColumns="4"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="2dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/hot_pin_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hot_category_rl">
+
+                        <TextView
+                            android:id="@+id/hot_pin_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="热销单品 | Hot Sale"
+                            android:textColor="#FF3C4151"
+                            android:textSize="14sp" />
+
+
+                        <com.technology.greenenjoyshoppingstreet.utils.view.GridViewInScroll
+                            android:id="@+id/new_season_data_gv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/hot_pin_tv"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:horizontalSpacing="11dp"
+                            android:listSelector="@drawable/grid_selector"
+                            android:numColumns="2"
+                            android:scrollbars="none"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="11dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/new_season_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hot_pin_rl">
+
+                        <TextView
+                            android:id="@+id/new_season_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="当季新品 | Hot Sale"
+                            android:textColor="#FF3C4151"
+                            android:textSize="14dp" />
+
+
+                        <com.technology.greenenjoyshoppingstreet.utils.view.HorizontalListView
+                            android:id="@+id/hot_pin_data_lv"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@+id/new_season_tv"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:divider="@color/no_sp"
+                            android:dividerHeight="1dp"
+                            android:listSelector="@drawable/grid_selector"
+                            android:scrollbars="none" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/category_goods_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/new_season_rl">
+
+                        <TextView
+                            android:id="@+id/category_goods_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="分类商品 | Hot Sale"
+                            android:textColor="#FF3C4151"
+                            android:textSize="14dp" />
+
+                        <com.technology.greenenjoyshoppingstreet.utils.view.GridViewInScroll
+                            android:id="@+id/category_goods_data_gv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/category_goods_tv"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:horizontalSpacing="11dp"
+                            android:listSelector="@drawable/grid_selector"
+                            android:numColumns="2"
+                            android:scrollbars="none"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="11dp" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </com.technology.greenenjoyshoppingstreet.utils.view.MyScrollView>
+
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- 大字号 -->
+    <dimen name="LargeTextSize">20sp</dimen>
+    <!-- 中字号 -->
+    <dimen name="MediumTextSize">18sp</dimen>
+    <!-- 标准字号 -->
+    <dimen name="BasicTextSize">14sp</dimen>
+    <!-- 小字号 -->
+    <dimen name="SmallTextSize">12sp</dimen>
+    <dimen name="TextSize">15dp</dimen>
+    <dimen name="margin_edge">15dp</dimen>
+
+    <dimen name="LoginMargin">30dp</dimen>
+    <dimen name="CommonMargin">10dp</dimen>
+    <dimen name="Title_height">44dp</dimen>
+
+</resources>

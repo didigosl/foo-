@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+
+    <Button
+        android:id="@+id/confirm_pay_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bt_save"
+        android:text="@string/confirm_payment"
+        android:textColor="@color/bt_save_text"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/total_hint"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/total_payment"
+        android:textColor="#FF3C4151"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total_hint"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/main_price"
+        android:textSize="50sp"
+        tools:text="€ 180.76" />
+
+    <ListView
+        android:id="@+id/data_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/confirm_pay_bt"
+        android:layout_below="@+id/price_tv"
+        android:layout_marginTop="60dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/no_sp"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/grid_selector"
+        android:scrollbars="none" />
+
+</RelativeLayout>

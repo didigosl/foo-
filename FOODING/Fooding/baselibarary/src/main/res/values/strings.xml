@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BaseLibarary</string>
+    <string name="bottom_user1">首页</string>
+    <string name="bottom_user2">微聊</string>
+    <string name="bottom_user3">服务</string>
+    <string name="bottom_user4">我的</string>
+</resources>

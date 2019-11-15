@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/info_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/in_title_bar"
+                layout="@layout/include_titlebar" />
+
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:id="@+id/refresh_fl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/in_title_bar"
+                cube_ptr:ptr_duration_to_close_either="1000"
+                cube_ptr:ptr_keep_header_when_refresh="true"
+                cube_ptr:ptr_pull_to_fresh="false"
+                cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+                cube_ptr:ptr_resistance="1.7">
+
+                <ScrollView
+                    android:id="@+id/root_sv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/head_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/white_pure">
+
+                            <ImageView
+                                android:id="@+id/head_iv"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="25dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ui55" />
+
+                            <TextView
+                                android:id="@+id/head_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:text="@string/avatar"
+                                android:textSize="16sp" />
+
+                            <View
+                                style="@style/henxian"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginEnd="25dp" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/name_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_below="@id/head_rl"
+                            android:background="@color/white_pure">
+
+                            <TextView
+                                android:id="@+id/name_hint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:text="@string/name_profile"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/name_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="25dp"
+                                android:textSize="16sp"
+                                tools:text="名字名字" />
+
+                            <View
+                                style="@style/henxian"
+                                android:layout_gravity="bottom"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginEnd="25dp" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/sex_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_below="@id/name_rl"
+                            android:background="@color/white_pure">
+
+                            <TextView
+                                android:id="@+id/sex_hint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:text="@string/genre"
+                                android:textSize="16sp" />
+
+
+                            <ImageView
+                                android:id="@+id/sex_arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="25dp"
+                                android:src="@drawable/ic_arrow_right" />
+
+                            <TextView
+                                android:id="@+id/sex_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="45dp"
+                                android:textSize="16sp"
+                                tools:text="性别" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/age_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_below="@id/sex_rl"
+                            android:background="@color/white_pure">
+
+                            <TextView
+                                android:id="@+id/age_hint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="25dp"
+                                android:text="@string/age"
+                                android:textSize="16sp" />
+
+
+                            <ImageView
+                                android:id="@+id/age_arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="25dp"
+                                android:src="@drawable/ic_arrow_right" />
+
+                            <TextView
+                                android:id="@+id/age_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="45dp"
+                                android:textSize="16sp"
+                                tools:text="年龄" />
+                        </FrameLayout>
+
+                    </RelativeLayout>
+                </ScrollView>
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_tm"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/bottom_rl"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true" />
+
+            <RelativeLayout
+                android:id="@+id/select_photo_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/bottom_rl"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/photo_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_dialog_bg">
+
+                    <Button
+                        android:id="@+id/photo_album_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/no_sp"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/take_photo"
+                        android:textSize="19sp" />
+
+                    <View
+                        android:id="@+id/divider"
+                        style="@style/henxian"
+                        android:layout_below="@id/photo_album_bt" />
+
+                    <Button
+                        android:id="@+id/select_photo_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider"
+                        android:background="@color/no_sp"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/choose_photo"
+                        android:textSize="19sp" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/photo_cancel_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_below="@id/photo_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shape_dialog_bg"
+                    android:text="@string/cancel"
+                    android:textColor="#FF3C4151"
+                    android:textSize="20dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sex_select_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/select_photo_rl"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/sex_head_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#FFF6F6F6">
+
+
+                    <RelativeLayout
+                        android:id="@+id/sex_cancel_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/cancel"
+                            android:textSize="17sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/selec_genre"
+                        android:textSize="17sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/sex_confirm_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="确定"
+                            android:textSize="17sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.itheima.wheelpicker.WheelPicker
+                    android:id="@+id/sex_wp"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:layout_below="@id/sex_head_rl"
+                    android:background="@color/white_pure"
+                    app:wheel_atmospheric="true"
+                    app:wheel_curved="true"
+                    app:wheel_cyclic="false"
+                    app:wheel_item_text_color="#FF999999"
+                    app:wheel_item_text_size="17dp"
+                    app:wheel_selected_item_position="5"
+                    app:wheel_selected_item_text_color="#FF000000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/age_select_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/sex_select_rl"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/age_head_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#FFF6F6F6">
+
+
+                    <RelativeLayout
+                        android:id="@+id/age_cancel_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/cancel"
+                            android:textSize="17sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/selec_age"
+                        android:textSize="17sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/age_confirm_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/ok"
+                            android:textSize="17sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.itheima.wheelpicker.WheelPicker
+                    android:id="@+id/age_wp"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    android:layout_below="@id/age_head_rl"
+                    android:background="@color/white_pure"
+                    app:wheel_atmospheric="true"
+                    app:wheel_curved="true"
+                    app:wheel_cyclic="false"
+                    app:wheel_item_text_color="#FF999999"
+                    app:wheel_item_text_size="17dp"
+                    app:wheel_selected_item_position="5"
+                    app:wheel_selected_item_text_color="#FF000000" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/top_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/age_select_rl" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

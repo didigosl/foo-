@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_title_bar"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/above_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/order_status_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/order_status_iv"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="24dp"
+                        tools:background="@drawable/ic_flag_payment" />
+
+                    <TextView
+                        android:id="@+id/order_status_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/order_status_iv"
+                        android:textColor="#FF3C4151"
+                        android:textSize="17sp"
+                        tools:text="已发货" />
+
+                    <TextView
+                        android:id="@+id/order_code_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:gravity="left"
+                        android:textColor="#FF3C4151"
+                        android:textSize="12sp"
+                        tools:text="物流信息：DHL\n单号：000000000000" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/address_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/order_status_rl"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/map_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="21dp"
+                        android:background="@drawable/ui32" />
+
+
+                    <!--<com.fang.dashview.DashView-->
+                    <!--android:id="@+id/divider"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_toRightOf="@id/map_iv"-->
+                    <!--app:dashOrientation="1"-->
+                    <!--app:dashWidth="2dp"-->
+                    <!--app:lineColor="@android:color/holo_green_light"-->
+                    <!--app:lineHeight="1dp"-->
+                    <!--app:lineWidth="4dp" />-->
+
+                    <ImageView
+                        android:id="@+id/divider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@id/map_iv"
+                        android:src="@drawable/ui26" />
+
+                    <TextView
+                        android:id="@+id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@id/divider"
+                        android:textSize="13dp"
+                        tools:text="李小倩" />
+
+
+                    <TextView
+                        android:id="@+id/phone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/name_tv"
+                        android:layout_toRightOf="@id/name_tv"
+                        android:textSize="12dp"
+                        tools:text="+34 685 36 98 26" />
+
+                    <TextView
+                        android:id="@+id/address_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name_tv"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@id/divider"
+                        android:textSize="12sp"
+                        tools:text="西班牙马德里西班牙马德里导游地接华宇" />
+                </RelativeLayout>
+
+
+                <com.technology.greenenjoyshoppingstreet.utils.view.ListViewInScroll
+                    android:id="@+id/data_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address_rl"
+                    android:layout_marginTop="10dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@color/no_sp"
+                    android:listSelector="@drawable/grid_selector"
+                    android:scrollbars="none" />
+
+
+                <LinearLayout
+                    android:id="@+id/tarnsport_price_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/data_lv"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/total_price_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/amount_product"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/total_price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            tools:text="€ 121.00" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="运费"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tarnsport_price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            tools:text="€ 121.00" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/return_price_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rebate"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/return_price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textSize="12sp"
+                            tools:text="€ 121.00" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dai_price_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/return_price_rl"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="@string/coupon"
+                            android:textColor="#FF3C4151"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/dai_price_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:textColor="@color/main_price"
+                            android:textSize="12sp"
+                            tools:text="€ 121.00" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tarnsport_price_rl"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/order_number_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/order_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/order_number"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/copy_order_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bx_4_texthei"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="13dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/copy"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/pay_mode_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/order_number_rl"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/payment_method_credit_card"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/pay_number_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/pay_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            tools:text="支付交易单号：00000000000000000000" />
+
+                        <TextView
+                            android:id="@+id/copy_pay_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bx_4_texthei"
+                            android:paddingLeft="13dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="13dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/copy"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/order_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="12sp"
+                        tools:text="下单时间：2018-1-2 18:00" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/opeartion_one_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/layout_bottom"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/lr_4_main"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    tools:text="新增收获地址" />
+
+
+                <Button
+                    android:id="@+id/opeartion_two_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/opeartion_one_bt"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/lr_4_main"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    tools:text="新增收获地址" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

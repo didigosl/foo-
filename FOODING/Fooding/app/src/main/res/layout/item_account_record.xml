@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#FF3C4151"
+        android:textSize="16sp"
+        tools:text="返利（一级子属：李维）" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="18dp"
+        android:textColor="#FF808080"
+        android:textSize="12sp"
+        tools:text="2018-1-10" />
+
+    <TextView
+        android:id="@+id/balance_tv"
+        android:layout_width="114.5dp"
+        android:layout_height="13dp"
+        android:layout_below="@id/name_tv"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="#FF808080"
+        android:textSize="12sp"
+        tools:text="余额：3.00" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/time_tv"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/main_price"
+        android:textSize="18sp"
+        tools:text="+ € 18" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/balance_tv"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/grey_sp" />
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_pure"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_title_bar"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RatingBar
+                android:id="@+id/star_rb"
+                style="@style/bigFiveRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="50dp"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1" />
+
+
+            <Button
+                android:id="@+id/commit_bt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="25dp"
+                android:background="@drawable/shape_purple"
+                android:text="@string/send_evaluate"
+                android:textColor="#FFFFFFFF"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/evalute_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/commit_bt"
+                android:layout_below="@id/star_rb"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="#FFF6F6F6"
+                android:gravity="left|top"
+                android:hint="@string/hint_advantages_disadvantages"
+                android:padding="15dp"
+                android:textColorHint="#FFA4A4A4"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

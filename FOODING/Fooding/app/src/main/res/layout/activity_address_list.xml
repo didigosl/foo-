@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_title_bar"
+        layout="@layout/include_titlebar" />
+
+    <Button
+        android:id="@+id/add_address_bt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        android:background="@color/main_theme"
+        android:text="@string/add_new_address"
+        android:textColor="@color/main_text_btn"
+        android:textSize="17sp" />
+
+    <com.technology.greenenjoyshoppingstreet.utils.view.ListViewInScroll
+        android:id="@+id/data_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_address_bt"
+        android:layout_below="@id/in_title_bar"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@drawable/grid_selector"
+        android:scrollbars="none" />
+
+
+</RelativeLayout>

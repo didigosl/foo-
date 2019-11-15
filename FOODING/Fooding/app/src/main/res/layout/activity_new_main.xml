@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_p"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdoBtn_home"
+            style="@style/tab_menu_item"
+            android:checked="true"
+            android:drawableTop="@drawable/rb_main_page"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/rdoBtn_classify"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/rb_category"
+            android:text="@string/category" />
+
+
+        <RadioButton
+            android:id="@+id/rdoBtn_shopping_cart"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/rb_cart"
+            android:text="@string/cart" />
+
+        <RadioButton
+            android:id="@+id/rdoBtn_me"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/rb_mine"
+            android:text="@string/profile" />
+    </RadioGroup>
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="120dp"
+              android:background="@drawable/ic_coupon_bg"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <com.fang.dashview.DashView
+            android:id="@+id/center_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            app:dashOrientation="1"
+            app:dashWidth="2dp"
+            app:lineColor="@android:color/holo_green_light"
+            app:lineHeight="1dp"
+            app:lineWidth="4dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/center_divider"
+            android:background="@color/white_pure">
+
+            <TextView
+                android:id="@+id/unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="40dp"
+                android:text="€"
+                android:textColor="@color/main_price"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="24dp"
+                android:layout_toRightOf="@id/unit_tv"
+                android:text="20"
+                android:textColor="@color/main_price"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/description_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/unit_tv"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:text="满 €300 元使用"
+                android:textColor="#FF45CBC0"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:text="女装专场满减券"
+            android:textColor="#FF3C4151"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/live_time_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_tv"
+            android:layout_marginLeft="25dp"
+            android:text="使用期限："
+            android:textColor="#FFA4A4A4"
+            android:textSize="12dp"/>
+
+        <TextView
+
+            android:id="@+id/live_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/live_time_hint"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#FFA4A4A4"
+            android:textSize="12dp"
+            tools:text="2017-12-16-2017-12-31"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
